@@ -17,9 +17,13 @@ def dowload_wordsim():
 def download_men():
     men_lemma_url = "https://raw.githubusercontent.com/julieweeds/MEN/master/data/MEN/MEN_dataset_lemma_form_full"
     men_natural_url = "https://raw.githubusercontent.com/julieweeds/MEN/master/data/MEN/MEN_dataset_natural_form_full"
+    men_dev_url = "https://raw.githubusercontent.com/julieweeds/MEN/master/data/MEN/MEN_dataset_lemma_form.dev"
+    men_test_url = "https://raw.githubusercontent.com/julieweeds/MEN/master/data/MEN/MEN_dataset_lemma_form.test"
     os.system("mkdir data/men")
     os.system("wget -P data/men/ %s" % men_lemma_url)
     os.system("wget -P data/men/ %s" % men_natural_url)
+    os.system("wget -P data/men/ %s" % men_dev_url)
+    os.system("wget -P data/men/ %s" % men_test_url)
 
 #def download_vis_sim_sim():
 #    vis_sem_sim_url = "http://homepages.inf.ed.ac.uk/s1151656/xyzblabli/similarity_judgements.txt"
