@@ -141,6 +141,7 @@ def process_benchmarks(benchmark_subset=False):
     usf, simlex, simconq_q1, simconq_q2, simconq_q3, simconq_q4 = parse_simlex(simlex_path)
     ws353 = parse_wordsim353(wordsim353_path)
     men_full = parse_men(men_path_natural, lemma=False)
+    men_full_lemma = parse_men(men_path_lemma, lemma=True)
     men_dev = parse_men(men_path_dev, lemma=True)
     men_test = parse_men(men_path_test, lemma=True)
     vis_sim, sem_sim = parse_vis_sem_sim(vis_sem_sim_path)
@@ -152,6 +153,7 @@ def process_benchmarks(benchmark_subset=False):
         benchmarks = {"usf": usf,
                       "ws353": ws353,
                       "men_full":men_full,
+                      "men_full_lemma":men_full_lemma,
                       "men_dev":men_dev,
                       "men_test":men_test,
                       "vis_sim":vis_sim,
@@ -164,6 +166,7 @@ def process_benchmarks(benchmark_subset=False):
         benchmarks = {"usf": usf,
                       "ws353": ws353,
                       "men_full":men_full,
+                      "men_full_lemma":men_full_lemma,
                       "men_dev":men_dev,
                       "men_test":men_test,
                       "vis_sim":vis_sim,
